@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Una página web de ejemplo con una estructura sencilla y adaptable."
+    />
+    <title>Mi página web</title>
+    <style>
+      :root {
+        color-scheme: light;
+        font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+          sans-serif;
+        color: #172033;
+        background: #f5f7fb;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+
+      body {
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      a {
+        color: inherit;
+      }
+
+      .container {
+        width: min(100% - 2rem, 960px);
+        margin-inline: auto;
+      }
+
+      header {
+        background: #fff;
+        border-bottom: 1px solid #e5e9f2;
+      }
+
+      .header-content,
+      nav ul {
+        display: flex;
+        align-items: center;
+      }
+
+      .header-content {
+        justify-content: space-between;
+        min-height: 72px;
+        gap: 1rem;
+      }
+
+      .logo {
+        color: #3157c8;
+        font-size: 1.2rem;
+        font-weight: 700;
+        text-decoration: none;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 1.25rem;
+        margin: 0;
+        padding: 0;
+        list-style: none;
+      }
+
+      nav a {
+        text-decoration: none;
+      }
+
+      nav a:hover,
+      nav a:focus-visible {
+        color: #3157c8;
+      }
+
+      main {
+        padding-block: 3rem;
+      }
+
+      .hero {
+        padding: 3.5rem 2rem;
+        border-radius: 1rem;
+        background: #e9efff;
+        text-align: center;
+      }
+
+      .hero h1 {
+        margin: 0 0 0.75rem;
+        font-size: clamp(2rem, 5vw, 3rem);
+        line-height: 1.15;
+      }
+
+      .hero p {
+        max-width: 600px;
+        margin: 0 auto 1.5rem;
+        color: #46516a;
+      }
+
+      .button {
+        display: inline-block;
+        padding: 0.7rem 1.1rem;
+        border-radius: 0.5rem;
+        background: #3157c8;
+        color: #fff;
+        font-weight: 600;
+        text-decoration: none;
+      }
+
+      .button:hover,
+      .button:focus-visible {
+        background: #2445a8;
+      }
+
+      section {
+        padding-block: 2rem;
+      }
+
+      section h2 {
+        margin-top: 0;
+      }
+
+      .services {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+
+      .card {
+        padding: 1.25rem;
+        border: 1px solid #e5e9f2;
+        border-radius: 0.75rem;
+        background: #fff;
+      }
+
+      .card h3 {
+        margin-top: 0;
+      }
+
+      footer {
+        padding-block: 1.5rem;
+        border-top: 1px solid #e5e9f2;
+        color: #59647a;
+        text-align: center;
+      }
+
+      footer p {
+        margin: 0;
+      }
+
+      @media (max-width: 560px) {
+        .header-content {
+          align-items: flex-start;
+          flex-direction: column;
+          justify-content: center;
+          padding-block: 1rem;
+        }
+
+        nav ul {
+          gap: 0.75rem 1rem;
+        }
+
+        .hero {
+          padding: 2.5rem 1.25rem;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="container header-content">
+        <a class="logo" href="#inicio">Mi página</a>
+        <nav aria-label="Navegación principal">
+          <ul>
+            <li><a href="#inicio">Inicio</a></li>
+            <li><a href="#acerca">Acerca de</a></li>
+            <li><a href="#servicios">Servicios</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main class="container">
+      <section class="hero" id="inicio" aria-labelledby="titulo-principal">
+        <h1 id="titulo-principal">Bienvenido a mi página web</h1>
+        <p>
+          Este es un punto de partida sencillo para compartir información sobre
+          tu proyecto, negocio o idea.
+        </p>
+        <a class="button" href="#acerca">Conoce más</a>
+      </section>
+
+      <section id="acerca" aria-labelledby="titulo-acerca">
+        <h2 id="titulo-acerca">Acerca de</h2>
+        <p>
+          Usa este espacio para contar quién eres, qué haces y qué hace especial
+          a tu proyecto. Puedes adaptar el contenido a tus necesidades.
+        </p>
+      </section>
+
+      <section id="servicios" aria-labelledby="titulo-servicios">
+        <h2 id="titulo-servicios">Servicios</h2>
+        <div class="services">
+          <article class="card">
+            <h3>Servicio uno</h3>
+            <p>Describe brevemente el primer servicio o característica.</p>
+          </article>
+          <article class="card">
+            <h3>Servicio dos</h3>
+            <p>Agrega aquí información sobre otra opción que ofreces.</p>
+          </article>
+          <article class="card">
+            <h3>Servicio tres</h3>
+            <p>Explica cómo puedes ayudar a tus visitantes o clientes.</p>
+          </article>
+        </div>
+      </section>
+
+      <section id="contacto" aria-labelledby="titulo-contacto">
+        <h2 id="titulo-contacto">Contacto</h2>
+        <p>
+          ¿Tienes alguna pregunta?
+          <a href="mailto:hola@ejemplo.com">Escríbenos por correo</a>.
+        </p>
+      </section>
+    </main>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2026 Mi página. Todos los derechos reservados.</p>
+      </div>
+    </footer>
+  </body>
+</html>
